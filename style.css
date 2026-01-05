@@ -1,5 +1,54 @@
-.bg-img{
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
+/* Remove default body margin */
+body {
+  margin: 0;
+  font-family: Lato;
+}
+
+/* Full-screen background image */
+.bg-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;                 /* full viewport height */
+  background-image: url("https://plus.unsplash.com/premium_photo-1670360414483-64e6d9ba9038?q=100&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.6);       /* darken image so text/nav is visible */
+}
+
+/* Make navbar sit on top of the image */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;                    /* above the background section */
+}
+
+/* Navbar link styles */
+.navbar .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #f8f9fa;
+}
+
+/* Brand styling */
+.navbar-brand {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Ensure toggler icon is visible on dark background */
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Centered hero text */
+.bg-image .text-center {
+  position: relative;
+  z-index: 5;                     /* above darkened background */
 }
